@@ -33,7 +33,7 @@ require("../back/conexao.php")
             <h3>Saque</h3>
 
             <form action="../back/sacar.php" method="post">
-                <input type="number" min="1" placeholder="Valor para saque: " name="valor_saque">
+                <input type="number" min="1" placeholder="Valor para saque:" name="valor_saque">
                 <button type="submit">Sacar</button>
             </form>
 
@@ -66,8 +66,8 @@ require("../back/conexao.php")
         <div class="container">
             <h3>Depósito</h3>
 
-            <form action="" method="post">
-                <input type="number" min="1" name="" placeholder="Valor para depósito: " id="">
+            <form action="../back/depositar.php" method="post">
+                <input type="number" min="1" name="" placeholder="Valor para depósito: " name="valor_deposito">
                 <button type="submit">Depósito</button>
             </form>
 
@@ -76,8 +76,8 @@ require("../back/conexao.php")
         <div class="container">
             <h3>Empréstimo</h3>
 
-            <form action="" method="post">
-                <input type="number" min="10" name="" placeholder="Valor para empréstimo: " id="">
+            <form action="../back/emprestar.php" method="post">
+                <input type="number" min="10" name="" placeholder="Valor para empréstimo: " name="valor_emprestimo">
                 <button type="submit">Solicitar empréstimo</button>
             </form>
         </div>

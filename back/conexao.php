@@ -15,7 +15,7 @@ if (!$conexao) {
     $result_select = mysqli_fetch_row($query);
 
     if ($result_select) {
-$saldo =$result_select[0];
+    $saldo = $result_select[0];
     } else {
         $saldo = 0;
     }
