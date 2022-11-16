@@ -67,9 +67,18 @@ require("../back/conexao.php")
             <h3>Depósito</h3>
 
             <form action="../back/depositar.php" method="post">
-                <input type="number" min="1" name="" placeholder="Valor para depósito: " name="valor_deposito">
+                <input type="number" min="1" placeholder="Valor para depósito: " name="valor_deposito">
                 <button type="submit">Depósito</button>
             </form>
+
+            <?php
+               if (isset($_SESSION['valor_depositado'])) {
+               echo "<script language='javascript'>
+               alert('Valor depositado!');
+               </script>";
+               }
+               unset($_SESSION['valor_depositado']);
+            ?>
 
         </div>
 
@@ -77,9 +86,17 @@ require("../back/conexao.php")
             <h3>Empréstimo</h3>
 
             <form action="../back/emprestar.php" method="post">
-                <input type="number" min="10" name="" placeholder="Valor para empréstimo: " name="valor_emprestimo">
+                <input type="number" min="10" placeholder="Valor para empréstimo: " name="valor_emprestimo">
                 <button type="submit">Solicitar empréstimo</button>
             </form>
+            <?php
+            if (isset($_SESSION['valor_emprestado'])){
+                echo "<script language='javascript'>
+                alert('Emprestimo feito com sucesso!');
+                </script>";
+            }
+            unset($_SESSION['valor_emprestado'])
+            ?>
         </div>
     </div>
 </body>
